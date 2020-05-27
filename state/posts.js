@@ -4,7 +4,7 @@ import { getHotPosts } from '../services/reddit';
 
 const postsSlice = createSlice({
   name: 'posts',
-  initialState: { loading: false, posts: [] },
+  initialState: { loading: true, posts: [] },
   reducers: {
     postsLoading(state, action) {
       state.subreddit = action.payload.subreddit;

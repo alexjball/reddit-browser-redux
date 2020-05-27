@@ -55,7 +55,6 @@ Object {
       },
     ],
   },
-  "score": 258406,
   "selfText": "",
   "selfTextHtml": null,
   "subreddit": "pics",
@@ -116,7 +115,6 @@ Object {
       },
     ],
   },
-  "score": 57134,
   "selfText": "",
   "selfTextHtml": null,
   "subreddit": "movies",
@@ -182,7 +180,6 @@ Object {
       },
     ],
   },
-  "score": 230830,
   "selfText": "",
   "selfTextHtml": null,
   "subreddit": "pics",
@@ -203,7 +200,6 @@ Object {
   "permalink": "/r/redditdev/comments/gnc5a5/how_do_i_get_the_oauth_access_token_that_praw/",
   "permalinkUrl": "https://www.reddit.com/r/redditdev/comments/gnc5a5/how_do_i_get_the_oauth_access_token_that_praw/",
   "preview": undefined,
-  "score": 3,
   "selfText": "After running instantiating the reddit instance:
 
 

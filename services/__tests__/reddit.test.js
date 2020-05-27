@@ -24,28 +24,28 @@ it('self posts contain expected fields', async () => {
   expect(post.isSelf).toBeTruthy();
   expect(typeof post.selfText).toBe('string');
   expect(typeof post.selfTextHtml).toBe('string');
-  expect(post).toMatchSnapshot();
+  expectPostToMatchSnapshot(post);
 });
 
 it('link posts contain expected fields', async () => {
   const post = await getPost('gnggd4');
   expect(post.thumbnail).toMatch(/^http(s):\/\//i);
   expect(post.preview.images).not.toHaveLength(0);
-  expect(post).toMatchSnapshot();
+  expectPostToMatchSnapshot(post);
 });
 
 it('reddit image posts contain expected fields', async () => {
   const post = await getPost('5bx4bx');
   expect(post.url).toMatch(/reddituploads.com/i);
   expectPostWithImages(post);
-  expect(post).toMatchSnapshot();
+  expectPostToMatchSnapshot(post);
 });
 
 it('imgur image posts contain expected fields', async () => {
   const post = await getPost('61ns2w');
   expect(post.url).toMatch(/imgur.com/i);
   expectPostWithImages(post);
-  expect(post).toMatchSnapshot();
+  expectPostToMatchSnapshot(post);
 });
 
 const expectPostWithImages = post => {
@@ -55,4 +55,8 @@ const expectPostWithImages = post => {
   expect(typeof post.subreddit).toBe('string');
   expect(post.thumbnail).toMatch(/^http(s):\/\//i);
   expect(post.preview.images).not.toHaveLength(0);
+};
+
+const expectPostToMatchSnapshot = ({ score, ...staticContent }) => {
+  expect(staticContent).toMatchSnapshot();
 };

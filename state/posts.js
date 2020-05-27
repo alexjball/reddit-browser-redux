@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { getHotPosts } from '../services/reddit';
+
 const postsSlice = createSlice({
   name: 'posts',
   initialState: { loading: false, posts: [] },
@@ -14,7 +16,7 @@ const postsSlice = createSlice({
     },
     errorReceived(state, action) {
       state.loading = false;
-      state.error = String(action.payload.error);
+      state.error = action.payload.error;
     },
   },
 });
@@ -26,3 +28,11 @@ export const {
 } = postsSlice.actions;
 
 export default postsSlice.reducer;
+
+export const fetchPosts = subreddit => dispatch => {
+  dispatch(postsLoading({ subreddit }));
+  getHotPosts({ subreddit })
+    .then(posts => posts.toJSON())
+    .then(posts => dispatch(postsReceived({ posts })))
+    .catch(error => dispatch(errorReceived({ error: String(error) })));
+};

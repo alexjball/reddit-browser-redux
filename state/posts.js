@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const postsSlice = createSlice({
   name: 'posts',
-  initialState: {loading: false, posts: []},
+  initialState: { loading: false, posts: [] },
   reducers: {
     postsLoading(state, action) {
       state.subreddit = action.payload.subreddit;
@@ -15,10 +15,14 @@ const postsSlice = createSlice({
     errorReceived(state, action) {
       state.loading = false;
       state.error = String(action.payload.error);
-    }
-  }
-})
+    },
+  },
+});
 
-export const { postsLoading, postsReceived, errorReceived } = todosSlice.actions
+export const {
+  postsLoading,
+  postsReceived,
+  errorReceived,
+} = postsSlice.actions;
 
-export default postsSlice.reducer
+export default postsSlice.reducer;

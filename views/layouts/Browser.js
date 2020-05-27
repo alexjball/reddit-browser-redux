@@ -28,9 +28,7 @@ const Browser = ({ posts, subreddit, loading, error, fetchPosts }) => {
   return (
     <View style={styles.container}>
       <FlatList
-        ListHeaderComponent={
-          <SubredditPicker initialSubreddit={subreddit} onPick={fetchPosts} />
-        }
+        ListHeaderComponent={<SubredditPicker />}
         contentContainerStyle={styles.listContainer}
         data={posts}
         keyExtractor={post => post.id}

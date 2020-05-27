@@ -18,10 +18,10 @@ export default ({ post }) => {
   );
 };
 
-const Header = ({ post: { author, subreddit } }) => (
+const Header = ({ post: { author, authorLink, subreddit, subredditLink } }) => (
   <View style={styles.header}>
-    <Link url={`https://www.reddit.com/r/${author}`} label={`r/${subreddit}`} />
-    <Link url={`https://www.reddit.com/user/${author}`} label={`u/${author}`} />
+    <Link url={subredditLink} label={`r/${subreddit}`} />
+    <Link url={authorLink} label={`u/${author}`} />
   </View>
 );
 
@@ -58,12 +58,9 @@ const Content = ({ post, expanded }) => {
   );
 };
 
-const Footer = ({ post: { permalink, num_comments: numComments } }) => (
+const Footer = ({ post: { permalinkUrl, numComments } }) => (
   <View style={{ flexDirection: 'row' }}>
-    <Link
-      url={`https://www.reddit.com${permalink}`}
-      label={`${numComments} comments`}
-    />
+    <Link url={permalinkUrl} label={`${numComments} comments`} />
   </View>
 );
 

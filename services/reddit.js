@@ -42,7 +42,34 @@ const getClient = (() => {
 })();
 
 export const getHotPosts = async ({ subreddit = 'popular', limit = 25 } = {}) =>
-  getClient().then(client => client.getHot(subreddit, { limit }));
+  getClient()
+    .then(client => client.getHot(subreddit, { limit }))
+    .then(posts => posts.map(postAdapter));
 
 export const getPost = async id =>
-  getClient().then(client => client.getSubmission(id).fetch());
+  getClient()
+    .then(client => client.getSubmission(id).fetch())
+    .then(postAdapter);
+
+// Post structure is described here: https://github.com/reddit-archive/reddit/wiki/JSON
+const postAdapter = post => {
+  const data = post.toJSON();
+  return {
+    name: data.name,
+    title: data.title,
+    author: data.author,
+    authorUrl: `https://www.reddit.com/user/${data.author}`,
+    subreddit: data.subreddit,
+    subredditUrl: `https://www.reddit.com/r/${data.subreddit}`,
+    numComments: data.num_comments,
+    score: data.score,
+    permalink: data.permalink,
+    permalinkUrl: `https://www.reddit.com${data.permalink}`,
+    thumbnail: data.thumbnail,
+    isSelf: data.is_self,
+    selfText: data.selftext,
+    selfTextHtml: data.selftext_html,
+    preview: data.preview,
+    url: data.url,
+  };
+};

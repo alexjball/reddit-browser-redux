@@ -46,7 +46,7 @@ const Content = ({ post, expanded }) => {
   }
 
   const source = post.preview?.images?.[0]?.source;
-  const selfBody = post.selftext_html;
+  const selfBody = post.selfTextHtml;
 
   return (
     <View style={styles.content}>

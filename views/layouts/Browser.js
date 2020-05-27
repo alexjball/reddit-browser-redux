@@ -14,12 +14,12 @@ import SubredditPicker from '../components/SubredditPicker';
 
 const initialSubreddit = 'popular';
 
-const Browser = ({ posts, subreddit, loading, error, fetchPosts }) => {
+const Browser = ({ posts, loading, error, fetchPosts }) => {
   useEffect(() => {
     fetchPosts(initialSubreddit);
   }, []);
 
-  if (loading || !subreddit) {
+  if (loading) {
     return <ActivityIndicator style={styles.spinner} size="large" />;
   } else if (error) {
     return <Text>Error fetching posts: {String(error)}</Text>;

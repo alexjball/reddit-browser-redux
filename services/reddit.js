@@ -59,6 +59,7 @@ const postAdapter = post => {
     title: data.title,
     author: data.author,
     authorUrl: `https://www.reddit.com/user/${data.author}`,
+    id: data.id,
     subreddit: data.subreddit,
     subredditUrl: `https://www.reddit.com/r/${data.subreddit}`,
     numComments: data.num_comments,

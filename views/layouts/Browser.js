@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 
 import { fetchPosts } from '../../state/posts';
+import { labels } from '../accessibility';
 import PostCard from '../components/PostCard';
 import SubredditPicker from '../components/SubredditPicker';
 
@@ -20,7 +21,13 @@ const Browser = ({ posts, loading, error, fetchPosts }) => {
   }, []);
 
   if (loading) {
-    return <ActivityIndicator style={styles.spinner} size="large" />;
+    return (
+      <ActivityIndicator
+        accessibilityLabel={labels.loadingIcon}
+        style={styles.spinner}
+        size="large"
+      />
+    );
   } else if (error) {
     return <Text>Error fetching posts: {String(error)}</Text>;
   }

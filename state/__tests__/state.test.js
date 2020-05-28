@@ -1,11 +1,9 @@
 import { createStore } from '..';
 import { getHotPosts } from '../../services/reddit';
+import { act, settablePromise } from '../../testing';
 import { fetchPosts } from '../posts';
 
 jest.mock('../../services/reddit');
-
-const endOfEventLoop = () =>
-  new Promise(resolve => setTimeout(() => resolve(), 0));
 
 let store;
 beforeEach(() => (store = createStore()));
@@ -20,10 +18,8 @@ it('is initially empty', () => {
 });
 
 it('loads posts', async () => {
-  let resolve;
-  getHotPosts.mockReturnValueOnce(
-    new Promise(_resolve => (resolve = _resolve))
-  );
+  const pendingFetch = settablePromise();
+  getHotPosts.mockReturnValueOnce(pendingFetch);
 
   store.dispatch(fetchPosts('popular'));
   expect(store.getState()).toMatchInlineSnapshot(`
@@ -34,9 +30,7 @@ it('loads posts', async () => {
     }
   `);
 
-  resolve({ toJSON: () => ['post 1', 'post 2'] });
-
-  await endOfEventLoop();
+  await act(() => pendingFetch.resolve(['post 1', 'post 2']));
 
   expect(store.getState()).toMatchInlineSnapshot(`
     Object {

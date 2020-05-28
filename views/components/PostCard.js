@@ -2,6 +2,7 @@ import * as WebBrowser from 'expo-web-browser';
 import React, { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
+import { labels } from '../accessibility';
 import InlineHtml from './InlineHtml';
 
 export default ({ post }) => {
@@ -9,7 +10,7 @@ export default ({ post }) => {
   const onExpand = useCallback(() => setExpanded(!expanded), [expanded]);
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} accessibilityLabel={labels.postCard}>
       <Header post={post} />
       <Preview post={post} onExpand={onExpand} />
       <Content post={post} expanded={expanded} />

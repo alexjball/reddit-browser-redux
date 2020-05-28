@@ -32,7 +32,6 @@ export default postsSlice.reducer;
 export const fetchPosts = subreddit => dispatch => {
   dispatch(postsLoading({ subreddit }));
   getHotPosts({ subreddit })
-    .then(posts => posts.toJSON())
     .then(posts => dispatch(postsReceived({ posts })))
     .catch(error => dispatch(errorReceived({ error: String(error) })));
 };

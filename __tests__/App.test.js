@@ -31,3 +31,14 @@ it('renders the feed after loading', async () => {
 
   expect(getAllByLabelText(labels.postCard)).not.toHaveLength(0);
 });
+
+it('renders an error after failure', async () => {
+  const pendingFetch = settablePromise();
+  getHotPosts.mockReturnValueOnce(pendingFetch);
+
+  renderApp();
+
+  await act(() => pendingFetch.reject('404').catch(() => Promise.resolve()));
+
+  expect(getByLabelText(labels.postLoadError)).toBeDefined();
+});

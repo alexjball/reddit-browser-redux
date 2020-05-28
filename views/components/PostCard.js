@@ -27,7 +27,11 @@ const Header = ({ post: { author, authorLink, subreddit, subredditLink } }) => (
 );
 
 const Preview = ({ post: { thumbnail, title }, onExpand }) => (
-  <TouchableOpacity style={styles.preview} onPress={onExpand}>
+  <TouchableOpacity
+    accessibilityLabel={labels.expandContentButton}
+    style={styles.preview}
+    onPress={onExpand}
+  >
     <Text style={styles.title}>{title}</Text>
     {thumbnail.startsWith('http') && (
       <Image

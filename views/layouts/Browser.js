@@ -29,7 +29,11 @@ const Browser = ({ posts, loading, error, fetchPosts }) => {
       />
     );
   } else if (error) {
-    return <Text>Error fetching posts: {String(error)}</Text>;
+    return (
+      <Text accessibilityLabel={labels.postLoadError}>
+        Error fetching posts: {String(error)}
+      </Text>
+    );
   }
 
   return (

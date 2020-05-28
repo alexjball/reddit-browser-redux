@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when collapsed 1`] = `
+<body>
+  <div>
+    <div
+      aria-label="post card"
+      class="css-view-1dbjc4n"
+      style="align-self: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; margin-bottom: 10px; max-width: 500px; padding: 10px 10px 10px 10px; width: 100%;"
+    >
+      <div
+        class="css-view-1dbjc4n"
+        style="flex-direction: row; margin-bottom: 5px;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            r/pics
+          </div>
+        </div>
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            u/Itsjorgehernandez
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="expand content button"
+        class="css-view-1dbjc4n"
+        data-focusable="true"
+        style="cursor: pointer; flex-direction: row; margin-bottom: 5px; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao"
+          dir="auto"
+          style="flex-grow: 1; flex-shrink: 1; flex-basis: 0%; font-size: 15px; font-weight: bold; margin-right: 10px;"
+        >
+          Thanks, Obama.
+        </div>
+        <div
+          class="css-view-1dbjc4n"
+          style="flex-basis: auto; height: 100px; overflow-x: hidden; overflow-y: hidden; width: 100px; z-index: 0;"
+        >
+          <div
+            class="css-view-1dbjc4n"
+            style="background-color: rgba(0, 0, 0, 0); background-position: center; background-repeat: no-repeat; background-size: contain; bottom: 0px; height: 100%; left: 0px; position: absolute; right: 0px; top: 0px; width: 100%; z-index: -1; background-image: url(https://b.thumbs.redditmedia.com/Fr9R6tnl-EsiU4mU_YdmULZuX5asE3URcnfvK2rk_OI.jpg);"
+          />
+          <img
+            alt=""
+            class="css-accessibilityImage-9pa8cd"
+            draggable="false"
+            src="https://b.thumbs.redditmedia.com/Fr9R6tnl-EsiU4mU_YdmULZuX5asE3URcnfvK2rk_OI.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="css-view-1dbjc4n"
+        style="flex-direction: row;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            6093 comments
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`renders image posts correctly when expanded 1`] = `
+<body>
+  <div>
+    <div
+      aria-label="post card"
+      class="css-view-1dbjc4n"
+      style="align-self: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; margin-bottom: 10px; max-width: 500px; padding: 10px 10px 10px 10px; width: 100%;"
+    >
+      <div
+        class="css-view-1dbjc4n"
+        style="flex-direction: row; margin-bottom: 5px;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            r/pics
+          </div>
+        </div>
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            u/Itsjorgehernandez
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="expand content button"
+        class="css-view-1dbjc4n"
+        data-focusable="true"
+        style="cursor: pointer; flex-direction: row; margin-bottom: 5px; transition-duration: 0.25s; transition-property: opacity; user-select: none; opacity: 1;"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao"
+          dir="auto"
+          style="flex-grow: 1; flex-shrink: 1; flex-basis: 0%; font-size: 15px; font-weight: bold; margin-right: 10px;"
+        >
+          Thanks, Obama.
+        </div>
+        <div
+          class="css-view-1dbjc4n"
+          style="flex-basis: auto; height: 100px; overflow-x: hidden; overflow-y: hidden; width: 100px; z-index: 0;"
+        >
+          <div
+            class="css-view-1dbjc4n"
+            style="background-color: rgba(0, 0, 0, 0); background-position: center; background-repeat: no-repeat; background-size: contain; bottom: 0px; height: 100%; left: 0px; position: absolute; right: 0px; top: 0px; width: 100%; z-index: -1; background-image: url(https://b.thumbs.redditmedia.com/Fr9R6tnl-EsiU4mU_YdmULZuX5asE3URcnfvK2rk_OI.jpg);"
+          />
+          <img
+            alt=""
+            class="css-accessibilityImage-9pa8cd"
+            draggable="false"
+            src="https://b.thumbs.redditmedia.com/Fr9R6tnl-EsiU4mU_YdmULZuX5asE3URcnfvK2rk_OI.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="css-view-1dbjc4n"
+        style="margin-bottom: 5px;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          style="flex-basis: auto; overflow-x: hidden; overflow-y: hidden; padding-top: 100%; position: relative; width: 100%; z-index: 0;"
+        >
+          <div
+            class="css-view-1dbjc4n"
+            style="background-color: rgba(0, 0, 0, 0); background-position: center; background-repeat: no-repeat; background-size: contain; bottom: 0px; height: 100%; left: 0px; position: absolute; right: 0px; top: 0px; width: 100%; z-index: -1; background-image: url(https://external-preview.redd.it/zMNWQ9dfhnCPSkbkniwM6J0y8QbuOJJfnGPrvk0JcY0.jpg?auto=webp&s=d46c9b24bad06caf5738921bcaf0e0ee91a74833);"
+          />
+          <img
+            alt=""
+            class="css-accessibilityImage-9pa8cd"
+            draggable="false"
+            src="https://external-preview.redd.it/zMNWQ9dfhnCPSkbkniwM6J0y8QbuOJJfnGPrvk0JcY0.jpg?auto=webp&s=d46c9b24bad06caf5738921bcaf0e0ee91a74833"
+          />
+        </div>
+      </div>
+      <div
+        class="css-view-1dbjc4n"
+        style="flex-direction: row;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            6093 comments
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`renders self posts correctly when expanded 1`] = `
+<body>
+  <div>
+    <div
+      aria-label="post card"
+      class="css-view-1dbjc4n"
+      style="align-self: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; margin-bottom: 10px; max-width: 500px; padding: 10px 10px 10px 10px; width: 100%;"
+    >
+      <div
+        class="css-view-1dbjc4n"
+        style="flex-direction: row; margin-bottom: 5px;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            r/redditdev
+          </div>
+        </div>
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            u/orqa
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="expand content button"
+        class="css-view-1dbjc4n"
+        data-focusable="true"
+        style="cursor: pointer; flex-direction: row; margin-bottom: 5px; transition-duration: 0.25s; transition-property: opacity; user-select: none; opacity: 1;"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao"
+          dir="auto"
+          style="flex-grow: 1; flex-shrink: 1; flex-basis: 0%; font-size: 15px; font-weight: bold; margin-right: 10px;"
+        >
+          How do I get the OAuth access token that praw generates?
+        </div>
+      </div>
+      <div
+        class="css-view-1dbjc4n"
+        style="margin-bottom: 5px;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          style="height: 500px;"
+        >
+          <div
+            style="overflow: scroll; font-family: sans-serif;"
+          >
+            <!-- SC_OFF -->
+            <div
+              class="md"
+            >
+              <p>
+                After running instantiating the reddit instance:
+              </p>
+              
+
+
+              <pre>
+                <code>
+                      reddit = praw.Reddit(client_id=client_id,
+                     client_secret=client_secret,
+                     user_agent=user_agent,
+                     username=username,
+                     password=password)
+
+                </code>
+              </pre>
+              
+
+
+              <p>
+                is there a way for me to access the 
+                <code>
+                  access_token
+                </code>
+                 that praw generates using my bots' credentials?
+              </p>
+              
+
+
+              <p>
+                The reason I want this is so I'll be able to do regular API calls (using 
+                <code>
+                  requests
+                </code>
+                 instead of 
+                <code>
+                  praw
+                </code>
+                ) without having to generates a separate 
+                <code>
+                  access_token
+                </code>
+              </p>
+              
+
+
+              <p>
+                I was hoping for something like this:
+              </p>
+              
+
+
+              <pre>
+                <code>
+                  reddit.auth.access_token
+
+                </code>
+              </pre>
+              
+
+            </div>
+            <!-- SC_ON -->
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-view-1dbjc4n"
+        style="flex-direction: row;"
+      >
+        <div
+          class="css-view-1dbjc4n"
+          data-focusable="true"
+          style="cursor: pointer; transition-duration: 0.15s; transition-property: opacity; user-select: none;"
+          tabindex="0"
+        >
+          <div
+            class="css-text-901oao"
+            dir="auto"
+            style="margin-right: 10px;"
+          >
+            7 comments
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

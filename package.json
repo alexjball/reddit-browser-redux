@@ -6,8 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "test:conformance": "jest --updateSnapshot --testPathIgnorePatterns='/node_modules/' --testPathPattern='conformance.test.js'"
   },
   "jest": {

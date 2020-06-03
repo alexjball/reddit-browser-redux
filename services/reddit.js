@@ -44,7 +44,7 @@ const getClient = (() => {
 export const getHotPosts = async ({ subreddit = 'popular', limit = 25 } = {}) =>
   getClient()
     .then(client => client.getHot(subreddit, { limit }))
-    .then(posts => posts.map(postAdapter));
+    .then(posts => Array.from(posts.map(postAdapter)));
 
 export const getPost = async id =>
   getClient()

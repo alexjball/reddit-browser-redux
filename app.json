@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "reddit-browser-redux",
-    "slug": "reddit-browser-redux",
+    "name": "Universal Reddit Browser",
+    "slug": "universal-reddit-browser",
+    "description": "A universal reddit browser illustrating unit, integration, conformance, and end-to-end testing",
+    "githubUrl": "https://github.com/alexjball/reddit-browser-redux",
     "platforms": [
       "ios",
       "android",

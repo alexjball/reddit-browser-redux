@@ -1,9 +1,35 @@
-# reddit-browser-redux
-Universal Reddit browser demonstrating test setup for Expo managed workflows.
+# Testing Universal Apps
+
+[![Build Status](https://travis-ci.com/alexjball/reddit-browser-redux.svg?branch=master)](https://travis-ci.com/alexjball/reddit-browser-redux)
+
+[Web App](https://universal-reddit-browser.web.app/)
+
+[Mobile App](https://expo.io/@alexjball/universal-reddit-browser)
+
+This repo demonstrates how to test universal Expo apps. It is built around a simple Reddit browser using [Expo managed workflows](https://docs.expo.io/introduction/managed-vs-bare/#managed-workflow), [Redux toolkit](https://github.com/reduxjs/redux-toolkit), and [Snoowrap](https://github.com/not-an-aardvark/snoowrap). The testing setup and approach is applicable any React/React Native app.
+
+# The App
+
+Users can:
+
+- Scroll through a list of hot posts
+- Select the subreddit for which to show posts
+- Expand image and text content within the list
+- View the number of comments and open the comments page in a web browser
+- View the original poster and open their profile in a web browser
+- View the post's subreddit and open the subreddit in a web browser
+
+# The Tests
+
+The guiding principles used to write tests:
+
+- [Test behaviors, not implementations](https://testing.googleblog.com/2013/08/testing-on-toilet-test-behavior-not.html)
+- [Tests should resemble the way the software is used](https://testing-library.com/docs/guiding-principles)
+- Tests are documentation, and may document the software from different perspectives. User-oriented tests constitute [automated acceptance testing](https://martinfowler.com/articles/practical-test-pyramid.html#acceptance), and developer-oriented tests constitute unit and conformance tests.
 
 # CI/CD
 
-Tests run on all branches. On master, when tests pass, we deploy the web app to [Firebase](https://universal-reddit-browser.web.app/) and publish the mobile app to [Expo](https://expo.io/@alexjball/universal-reddit-browser).
+We use [Travis CI](https://travis-ci.com/github/alexjball/reddit-browser-redux). Tests run on all branches. On master, when tests pass, we deploy the web app to [Firebase](https://universal-reddit-browser.web.app/) and publish the mobile app to [Expo](https://expo.io/@alexjball/universal-reddit-browser).
 
 Deployment is configured using environment variables configured in [Travis settings](https://travis-ci.com/github/alexjball/reddit-browser-redux/settings):
 

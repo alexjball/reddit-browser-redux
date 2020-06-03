@@ -398,7 +398,6 @@ exports[`renders self posts correctly when expanded 1`] = `
             cacheEnabled={true}
             javaScriptEnabled={true}
             messagingEnabled={false}
-            messagingModuleName="WebViewMessageHandler1"
             overScrollMode="always"
             saveFormDataDisabled={false}
             scalesPageToFit={true}

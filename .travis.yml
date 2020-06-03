@@ -1,0 +1,32 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+    - .jest
+
+before_script:
+  - npm install -g npm@latest    
+
+stages:
+  - test
+  - name: deploy
+    if: branch = master
+
+jobs:
+  include:
+    - name: "Run Jest Tests"
+      script: npm run test:coverage
+    - name: "Run Reddit API Conformance Tests"
+      script: npm run test:conformance
+    - name: "Deploy Web App"
+      stage: deploy
+      script: npm run build:web
+      deploy:
+        provider: firebase
+        edge: true
+    - name: "Publish Mobile App"
+      script: 
+        - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+        - npx expo login --non-interactive -u $EXPO_CLI_USERNAME
+        - npx expo publish --non-interactive
+    

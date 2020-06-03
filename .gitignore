@@ -13,4 +13,10 @@ web-report/
 # macOS
 .DS_Store
 
+# Testing
 coverage
+.jest
+
+# Deployment
+.firebaserc
+.firebase

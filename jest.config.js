@@ -51,5 +51,6 @@ function withProjectConfig(project) {
       ...project.transform,
       '^.+\\.mjs$': 'babel-jest',
     },
+    cacheDirectory: './.jest',
   });
 }

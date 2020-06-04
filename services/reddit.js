@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import base64 from 'react-native-base64';
 import snoowrap from 'snoowrap';
 
@@ -9,7 +10,9 @@ if (!global.btoa) {
 class NativeSnoowrap extends snoowrap {
   constructor(options) {
     super(options);
-    this._nextRequestTimestamp = -1;
+    if (Platform.OS !== 'web') {
+      this._nextRequestTimestamp = -1;
+    }
   }
 
   credentialedClientRequest(options = {}) {
